@@ -18,6 +18,12 @@ function Navbar() {
         setSelectedMenu(newValue)
     }
 
+    // Store Username and Email in local storage
+    if (!isLoading && user) {
+        localStorage.setItem("username", user.name);
+        localStorage.setItem("email", user.email);
+      }
+
     return (
 
         <div>

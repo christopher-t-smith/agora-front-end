@@ -4,6 +4,7 @@ import Form from '../components/Form';
 import Footer from "../components/Footer"
 import FeedLoginRequired from "../components/FeedLoginRequired"
 import { useAuth0 } from "@auth0/auth0-react";
+import ProfilePageFeed from '../components/ProfilePageFeed';
 
 
 function Profile() {
@@ -23,7 +24,7 @@ function Profile() {
         <h1>User profile page</h1>
 
         {AfterLoginRendering()}
-
+        <ProfilePageFeed/>
         <Footer />
 
         </div>
