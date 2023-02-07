@@ -9,6 +9,12 @@ import Header from "./components/Header"
 
 
 function App() {
+
+  // Clear local storage on window close
+  window.onbeforeunload = function() {
+    localStorage.clear();
+ }
+
   return (
     <div>
       <Header />

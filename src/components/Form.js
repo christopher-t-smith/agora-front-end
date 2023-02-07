@@ -4,6 +4,8 @@ import { Button } from '@mui/material';
 import axios from 'axios';
 
 function Form() {
+    const username = localStorage.getItem('username');
+    const email = localStorage.getItem('email');
     const [title, setTitle] = useState('');
     const [body, setBody] = useState('');
     const [image, setImage] = useState('');
@@ -14,6 +16,8 @@ function Form() {
         e.preventDefault();
 
         const newPost = {
+            username,
+            email,
             title,
             media: {
                 image,
@@ -29,6 +33,11 @@ function Form() {
             });
 
             console.log(res.data);
+            // Reset Form Inputs
+            setTitle('');
+            setBody('');
+            setImage('');
+            setTags('');
         } catch (err) {
             console.error(err);
         }
