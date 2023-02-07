@@ -1,14 +1,32 @@
 import React from 'react'
-import Header from "../components/Header"
+import FeedLoginRequired from "../components/FeedLoginRequired"
+import Footer from "../components/Footer"
+import { useAuth0 } from "@auth0/auth0-react";
 
 function HomePage() {
+
+    const { loginWithRedirect, logout, user, isLoading } = useAuth0();
+
+    function AfterLoginRendering() {
+      if (!isLoading && !user) {return <FeedLoginRequired/>;}
+      return (<div>
+
+        <h2>After login successed & rendering other users' feeds</h2>
+
+      </div>);
+    }
+    
+
+
     return (
 
         <div>
+            
+            <h1>Welcome to Agora main homepage / feedpage!</h1>
+            <h1>Some ads or public feeds from admin without logging in</h1>
 
-        <Header />
-            <h1>Welcome to Agora!</h1>
-
+            {AfterLoginRendering()}
+        <Footer />
         </div>
     );
 }
