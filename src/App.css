@@ -1,8 +1,38 @@
-.App {
-  text-align: center;
 
+html {
+  min-height:100%;
+}
+body {
+  height: 100%;
+  margin: 0;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background: linear-gradient(to bottom, #ebfcfc2e, #0d5182cf);
 }
 
-.welcomeText {
-  color:blue;
+.navbar{
+margin-top: 8px;
+}
+
+.button {
+  background-color: #4b90c1; /* Green */
+  border: none;
+  color: white;
+  padding: 5px 50px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15px;
+  border-radius: 8px;
+  transition-duration: 0.4s;
+}
+
+.button:hover {
+  background-color: #096685;
+  color: white;
+}
+
+.aboutTop {
+  margin-top: 80px;
+
 }
