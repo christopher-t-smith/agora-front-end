@@ -6,6 +6,8 @@ import HomePageFeed from '../components/HomePageFeed';
 import welcome from '../assets/images/welcome.png';
 import { Grid } from '@mui/material';
 
+
+
 function HomePage() {
 
     const { loginWithRedirect, logout, user, isLoading } = useAuth0();
@@ -37,8 +39,9 @@ function HomePage() {
     return (
 
         <div>
-            
+
             {AfterLoginRendering()}
+
 
         </div>
     );

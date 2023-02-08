@@ -1,5 +1,6 @@
 import Form from '../components/Form';
-import Footer from "../components/Footer"
+import Geolocation from '../components/Geolocation';
+
 import { useAuth0 } from "@auth0/auth0-react";
 import ProfilePageFeed from '../components/ProfilePageFeed';
 import Dialog from '@mui/material/Dialog';
@@ -8,6 +9,9 @@ import React, {useState} from 'react'
 import ProfileLoginRequired from '../components/ProfileLoginRequired';
 import profileFeed from '../assets/images/profileFeed.png';
 import { Grid } from '@mui/material';
+
+
+
 
 
 function Profile() {
@@ -24,17 +28,22 @@ function Profile() {
           <br/><br/><br/>
           <div class="home-font5">ULTIMATE PERSONAL SPACE</div> 
           <div class="home-font6">GOT SOMETHING TO SHARE? WANT TO EDIT YOUR POSTS? NEED TO DELETE ONE OF THEM? ALL THINGS IS HAPPENING HERE!</div>
-   
-   
-                </Grid>
+          </Grid>
           <Grid item xs={6}>
           <img src={profileFeed} alt="CJ" width="400" height="300" />
           </Grid>
         </Grid>
         <br/>  <hr></hr>   <br/><br/>
-      
 
-      <Button variant="contained" color="primary" fullWidth onClick={()=>setFormOpen(true)}> Create New Post </Button>
+
+        
+        <Grid container>
+          <Grid item xs={10}>
+          <Button variant="contained" color="primary" fullWidth onClick={()=>setFormOpen(true)}> Create New Post </Button>
+          </Grid>
+        </Grid>
+
+     
 
     </div>);
   }
@@ -42,6 +51,8 @@ function Profile() {
   
     return (
       <div>
+              <Geolocation />
+
 
           <Dialog fullWidth maxWidth='sm' open={formOpen} onClose={() => setFormOpen(false)}>
           <Form/>
