@@ -38,10 +38,13 @@ function Form() {
             setBody('');
             setImage('');
             setTags('');
+            window.location.replace(window.location.href)
         } catch (err) {
             console.error(err);
         }
     };
+
+
 
     return (
         <div>
@@ -101,6 +104,8 @@ function Form() {
                     Submit Post
                 </Button>
             </form>
+
+
         </div>
     );
 }
