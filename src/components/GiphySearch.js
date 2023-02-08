@@ -32,7 +32,14 @@ const GiphySearch = ({ open, handleClose, handleSelect }) => {
         autoComplete="giphy-search"
         autoFocus
       />
-      <Button onClick={handleSearch}>Search</Button>
+      <Button
+        variant="contained"
+        color="primary"
+        fullWidth
+        onClick={handleSearch}
+      >
+        Search
+      </Button>
       {results.map((result) => (
         <img
           key={result.id}
@@ -50,10 +57,6 @@ const GiphySearch = ({ open, handleClose, handleSelect }) => {
           }}
         />
       ))}
-      <Button onClick={handleClose}>Cancel</Button>
-      <Button onClick={() => handleSelect(results[0].images.fixed_height.url)}>
-        Use Gif
-      </Button>
     </div>
   );
 };
