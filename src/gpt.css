@@ -1,0 +1,104 @@
+.App {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    /* background-color: #282c34; */
+    color: white;
+  }
+
+
+  
+  .menu-button {
+    padding:12px;
+    border:1px dotted white;
+    border-radius: 5px;
+    text-align: left;
+    transition:ease 0.25s all;
+  }
+  
+  .menu-button:hover {
+    background-color: rgba(7, 178, 158, 0.5);
+  }
+  
+  .menu-button span{
+    padding-right: 6px;
+    padding-right: 12px;;
+  }
+  
+  .chatbox {
+    /* flex:1; */
+    width:100%;
+    /* margin-left: 20px; */
+    margin-left: auto;
+    margin-right:auto;
+    border-radius: 5px;
+    
+    background: linear-gradient(0deg, #01c6323d, #027b9a3e, #008bee33);
+    /* position:relative; */
+  }
+    
+  
+  .chat-input-holder {
+  padding:24px;
+  /* position:absolute; */
+  top:30%;
+  left:0;right:0;
+  }
+  
+  .chat-input-textarea {
+    background-color: #06564f;
+    padding:12px;
+    width: 80%;
+    border-radius: 5px;
+    border:none;
+    border-color:none;
+    outline:none;
+    box-shadow: 0 0px 8px 0 rgba(0, 0, 0, 0.25);
+    color:white;
+    font-size:1em;
+  }
+  
+  .chat-log{
+  
+    text-align: left;
+  }
+  
+  .chat-message.chatgpt{
+    background-color:#1b6e9e85;
+  
+  }
+  
+  .chat-message-center {
+    display: flex;
+    max-width: 90%;
+    margin-left:auto;
+    margin-right:auto;
+    padding: 12px;
+    padding-left: 24px;
+    padding-right: 24px;
+    }
+  
+  
+  /* .avatar{
+  background:white;
+  border-radius: 50%;
+  width:40px;
+  height:40px
+  }
+  
+  .avatar.chatgpt{
+    background:rgb(72, 144, 9);
+    border-radius: 50%;
+    width:40px;
+    height:40px
+    }
+     */
+  
+  .message{
+    padding-left: 40px;
+    padding-right: 40px
+  }
+  
+  
+  
+
