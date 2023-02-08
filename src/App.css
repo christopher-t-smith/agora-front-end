@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap');
+
 
 html {
   min-height:100%;
@@ -8,6 +11,7 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background: linear-gradient(to bottom, #ebfcfc2e, #0d5182cf);
+  overflow-x: hidden;
 }
 
 .navbar{
@@ -175,4 +179,78 @@ padding:10px 10px;
 
 
 
+
+
+
+.sticky {
+    background-color: #fafafa;
+    width:400px;
+    min-height: auto;
+    position:fixed;
+    right: 20px;
+    border-radius: 10px;
+    padding:15px 15px;
+    margin-top: 550px;
+}
+
+.chatImag {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+hr{
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+  }
+  
+  
+.loginFeedImg {
+    opacity: 0.8;
+    border-radius: 30px;
+    width: 70%;
+}
+
+
+
+.home-font5 {
+    font-family: 'Righteous', cursive;
+    font-size: 40px;
+    font-weight: bold;
+    background: -webkit-linear-gradient(rgb(0, 98, 168), rgb(0, 156, 34));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .home-font6 {
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 18px;
+    font-weight: bold;  
+  }
+
+  .rule-font1{
+    font-family: 'Righteous', cursive;
+    font-size: 40px;
+    font-weight: bold;
+    background: -webkit-linear-gradient(rgb(168, 219, 255), rgb(137, 255, 162));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .rule-font2{
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 18px;
+    font-weight: bold;  
+
+  }
+
+  .agoraPic {
+    border-radius: 20%;
+  }
+  .promisePic {
+    border-radius: 30%;
+    height:400px;
+  }
 

@@ -1,15 +1,20 @@
 import React from 'react'
-
+import logo from '../assets/images/logo.png';
+import loginrequired from '../assets/images/loginrequired.png'
 
 function FeedLoginRequired() {
     return (
       <div>
- <img src="https://cdn-icons-png.flaticon.com/512/3442/3442357.png" alt="CJ" width="350" height="350" />
-        <h3>LOGIN is required for specific part of feedpage to see other users posts</h3>
+
+        <br/>  <hr></hr>   <br/><br/>
+
+        <div class="home-font5">HELLO THERE!</div> <div class="home-font6">WOULD YOU LIKE TO SEE MORE AWESOME FEEDS? PLEASE LOGIN OR SIGN-UP VIA BUTTON AT THE TOP</div> 
+
+      <img className = "loginFeedImg" src={loginrequired} alt="CJ"/>
+
 
       </div>
     );
   }
   
   export default FeedLoginRequired;
-  

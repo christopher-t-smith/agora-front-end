@@ -68,9 +68,7 @@ const ProfilePageFeed = () => {
       {posts.map((post) => (
         <Grid item xs={12} sm={6} md={4} lg={3} key={post._id}>
           <CardContent>
-            <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
-              Word of the Day
-            </Typography>
+
 
             <ActionAreaCard post={post} />
             <Button variant="contained" color="primary" fullWidth onClick={() => setFormOpen(true)}> Edit Post </Button>
