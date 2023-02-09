@@ -13,6 +13,7 @@
     "@testing-library/user-event": "^13.5.0",
     "axios": "^1.3.2",
     "dotenv": "^16.0.3",
+    "gh-pages": "^5.0.0",
     "mongodb": "^5.0.0",
     "mongoose": "^6.9.0",
     "react": "^18.2.0",
@@ -23,7 +24,10 @@
     "styled-components": "^5.3.6",
     "web-vitals": "^2.1.4"
   },
+  "homepage": "https://christopher-t-smith.github.io/agora-front-end/",
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
