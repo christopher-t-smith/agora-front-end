@@ -38,7 +38,6 @@ function ChatGPT() {
     console.log(data.message);
     console.log(chatLog);
   }
-
   return (
     <div className="App">
       {/* <img className="chatImag" src="https://cdn-icons-png.flaticon.com/512/3649/3649460.png" alt="CJ" width="80" height="80" /> */}

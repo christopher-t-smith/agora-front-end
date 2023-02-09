@@ -25,7 +25,7 @@ const ActionAreaCard = ({ post }) => {
     localStorage.setItem(`isLiked-${id}-${email}`, JSON.stringify(!isLiked));
 
     axios
-      .put(`https://agora-agora1.herokuapp.com/api/posts/${id}`, {
+      .put(`https://agora-agora1.herokuapp.com/api/posts/${id}/`, {
         likes: isLiked ? likes - 1 : likes + 1,
         email: post.email,
       })
