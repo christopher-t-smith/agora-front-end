@@ -9,7 +9,7 @@ const HomePageFeed = () => {
   useEffect(() => {
     // Make a GET request to the endpoint to retrieve the posts
     axios
-      .get("http://localhost:8000/api/posts")
+      .get("https://agora-agora1.herokuapp.com/api/posts")
       .then((res) => setPosts(res.data.posts))
       .catch((err) => console.error(err));
   }, []); // run only once on component mount

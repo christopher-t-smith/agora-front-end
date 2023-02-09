@@ -35,7 +35,7 @@ function Form() {
     };
 
     try {
-      const res = await axios.post("http://localhost:8000/api/posts", newPost, {
+      const res = await axios.post("https://agora-agora1.herokuapp.com/api/posts", newPost, {
         headers: {
           "Content-Type": "application/json",
         },
