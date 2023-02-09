@@ -28,7 +28,7 @@ const ProfilePageFeed = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:8000/api/posts")
+      .get("https://agora-agora1.herokuapp.com/api/posts")
       .then((res) => {
         const filteredPosts = res.data.posts.filter(
           (post) => post.email === email
@@ -43,7 +43,7 @@ const ProfilePageFeed = () => {
     console.log(id);
 
     axios
-      .put(`http://localhost:8000/api/posts/${id}`, {
+      .put(`https://agora-agora1.herokuapp.com/api/posts/${id}`, {
         title: title,
         body: body,
         media: {
@@ -59,7 +59,7 @@ const ProfilePageFeed = () => {
   };
 
   const handleDelete = (id) => {
-    axios.delete(`http://localhost:8000/api/posts/${id}`).then((res) => {
+    axios.delete(`https://agora-agora1.herokuapp.com/api/posts/${id}`).then((res) => {
       console.log("Feed deleted successfully");
       window.location.reload(true);
     });

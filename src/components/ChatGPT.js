@@ -24,7 +24,7 @@ function ChatGPT() {
 
     // fetch response to the api combining the chat log array of message
     const messages = chatLogNew.map((message) => message.message).join("\n");
-    const response = await fetch("http://localhost:8000/chatgpt/", {
+    const response = await fetch("https://agora-agora1.herokuapp.com/chatgpt/", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
