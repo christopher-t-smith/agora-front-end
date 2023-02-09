@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { TextField, Button } from "@mui/material";
+import { TextField, Button, Typography } from "@mui/material";
 import axios from "axios";
 import GiphySearch from "./GiphySearch";
 import Dialog from "@mui/material/Dialog";
@@ -11,6 +11,7 @@ function Form() {
   const [body, setBody] = useState("");
   const [tags, setTags] = useState("");
   const [selectedGif, setSelectedGif] = useState(null);
+  const [likes] = useState(0);
   const [open, setOpen] = useState(false);
 
   const handleGifSelect = (url) => {
@@ -30,6 +31,7 @@ function Form() {
       },
       body,
       tags: tags.split(",").map((tag) => tag.trim()),
+      likes,
     };
 
     try {
@@ -54,12 +56,13 @@ function Form() {
   return (
     <div>
       <form onSubmit={handleSubmit}>
+        <Typography variant="h4">Create a Post:</Typography>
         <TextField
           margin="normal"
           required
           fullWidth
           id="title"
-          label="Feed Title"
+          label="Title"
           name="title"
           value={title}
           onChange={(e) => setTitle(e.target.value)}
@@ -72,7 +75,7 @@ function Form() {
           required
           fullWidth
           id="body"
-          label="Feed Body"
+          label="Body"
           name="body"
           value={body}
           onChange={(e) => setBody(e.target.value)}
@@ -102,7 +105,7 @@ function Form() {
           margin="normal"
           fullWidth
           id="tags"
-          label="Tags (comma-separated)"
+          label="Tags (comma-separated)*"
           name="tags"
           value={tags}
           onChange={(e) => setTags(e.target.value)}
