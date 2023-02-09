@@ -10,7 +10,7 @@ const GiphySearch = ({ handleSelect }) => {
   const handleSearch = async () => {
     console.log(query);
     try {
-      const res = await axios.post("https://agora-agora1.herokuapp.com/api/giphy/", {
+      const res = await axios.post("https://agora-agora1.herokuapp.com/api/giphy", {
         query,
       });
       setResults(res.data.data);
