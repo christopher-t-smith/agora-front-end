@@ -7,7 +7,7 @@ function ChatGPT() {
   const [input, setInput] = useState('');
   const [chatLog, setChatLog] = useState([{
     user: "gpt",
-    message: "Welcome to Agora! Please ask me anything!"
+    message: "Welcome to AGORA. Please ask me anything!"
   }]);
 
   //clear chats
@@ -17,29 +17,27 @@ function ChatGPT() {
 
 
   async function handleSubmit(e) {
-    console.log("hello")
 
     e.preventDefault();
-    // let chatLogNew = [...chatLog, { user: "me", message: `${input}` }]
-    // setInput("")
-    // setChatLog(chatLogNew)
+    let chatLogNew = [...chatLog, { user: "me", message: `${input}` }]
+    setInput("")
+    setChatLog(chatLogNew)
 
-    // // fetch response to the api combining the chat log array of message 
-    // // and sending it as a message to local host:300 as a post
-    // const messages = chatLogNew.map((message) => message.message).join("\n")
-    // const response = await fetch("http://localhost:3080/", {
-    //   method: "POST",
-    //   headers: {
-    //     "Content-Type": "application/json"
-    //   },
-    //   body: JSON.stringify({
-    //     message: messages
-    //   })
-    // })
-    // const data = await response.json()
-    // setChatLog([...chatLogNew, { user: "gpt", message: `${data.message}` }])
-    // console.log(data.message)
-    // console.log(chatLog)
+    // fetch response to the api combining the chat log array of message 
+    const messages = chatLogNew.map((message) => message.message).join("\n")
+    const response = await fetch("http://localhost:8000/chatgpt/", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        message: messages
+      })
+    })
+    const data = await response.json()
+    setChatLog([...chatLogNew, { user: "gpt", message: `${data.message}` }])
+    console.log(data.message)
+    console.log(chatLog)
   }
 
   return (

@@ -8,7 +8,7 @@ const GeoLocation = () => {
             const { latitude, longitude } = position.coords;
             let mapText = document.getElementById("mapAbove");
             let mapArea = document.getElementById("googleMapSection")
-            mapArea.innerHTML = '<iframe class ="googleMap" height=480px width=100% style="border:0" loading="lazy" allowfullscreen src="https://www.google.com/maps/embed/v1/search?q=' + latitude + ',' + longitude + '&key=AIzaSyDeXWfZxJxN5ubZJ37xkR7DdCWHcNwIkpU&zoom=12"></iframe>'
+            mapArea.innerHTML = '<iframe class ="googleMap" height=210px width=100% style="border:0" loading="lazy" allowfullscreen src="https://www.google.com/maps/embed/v1/search?q=' + latitude + ',' + longitude + '&key=AIzaSyDeXWfZxJxN5ubZJ37xkR7DdCWHcNwIkpU&zoom=12"></iframe>'
 
         })
     } else {
@@ -20,6 +20,7 @@ const GeoLocation = () => {
             <div>
                 <div className="sticky">
                         <div id="mapAbove">DON'T FORGET TO SHARE COOL PLACES TO VISIT OR STUFF TO DO NEARBY TODAY! </div>
+                        <br></br>
                         <div id="googleMapSection"></div>
                 </div>
             </div>
