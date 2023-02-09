@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import { Button, TextField, Typography } from "@mui/material";
 
-const GiphySearch = ({ open, handleClose, handleSelect }) => {
+const GiphySearch = ({ handleSelect }) => {
   const [query, setQuery] = useState("");
   const [results, setResults] = useState([]);
   const [selectedGif, setSelectedGif] = useState(null);
@@ -41,7 +41,7 @@ const GiphySearch = ({ open, handleClose, handleSelect }) => {
       >
         Search
       </Button>
-      {results.map((result) => (
+      {results && results.map((result) => (
         <img
           key={result.id}
           src={result.images.fixed_height.url}
