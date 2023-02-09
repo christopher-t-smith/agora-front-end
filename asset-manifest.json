@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/agora-front-end/static/css/main.1d2a8d76.css",
+    "main.js": "/agora-front-end/static/js/main.0f9765c5.js",
+    "static/js/787.371299c6.chunk.js": "/agora-front-end/static/js/787.371299c6.chunk.js",
+    "static/media/agora.JPG": "/agora-front-end/static/media/agora.abab95cdac8fb51f46cc.JPG",
+    "static/media/promise.png": "/agora-front-end/static/media/promise.871d1ed9c0e3853c6e9c.png",
+    "static/media/welcome.png": "/agora-front-end/static/media/welcome.eb8d81fbe4dbbfa20e1b.png",
+    "static/media/loginrequired.png": "/agora-front-end/static/media/loginrequired.69a9a187e4caca75f3b4.png",
+    "static/media/profileFeed.png": "/agora-front-end/static/media/profileFeed.e4cce98e954d287ada1a.png",
+    "static/media/logo-black.png": "/agora-front-end/static/media/logo-black.2147f02484e53a58fb57.png",
+    "index.html": "/agora-front-end/index.html",
+    "main.1d2a8d76.css.map": "/agora-front-end/static/css/main.1d2a8d76.css.map",
+    "main.0f9765c5.js.map": "/agora-front-end/static/js/main.0f9765c5.js.map",
+    "787.371299c6.chunk.js.map": "/agora-front-end/static/js/787.371299c6.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1d2a8d76.css",
+    "static/js/main.0f9765c5.js"
+  ]
+}
