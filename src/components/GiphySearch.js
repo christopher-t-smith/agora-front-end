@@ -8,11 +8,14 @@ const GiphySearch = ({ handleSelect }) => {
   const [selectedGif, setSelectedGif] = useState(null);
 
   const handleSearch = async () => {
+    console.log(query);
     try {
       const res = await axios.post("https://agora-agora1.herokuapp.com/api/giphy/", {
         query,
       });
       setResults(res.data.data);
+      console.log(res.data.data);
+      console.log(results)
     } catch (err) {
       console.error(err);
     }
