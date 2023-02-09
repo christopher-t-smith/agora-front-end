@@ -24,10 +24,7 @@
     "styled-components": "^5.3.6",
     "web-vitals": "^2.1.4"
   },
-  "homepage": "https://christopher-t-smith.github.io/agora-front-end/",
   "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
