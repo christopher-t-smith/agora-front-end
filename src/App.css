@@ -179,24 +179,22 @@ padding:10px 10px;
 
 
 
-
-
-
 .sticky {
     background-color: #eaeaea34;
-    width:250px;
-    height:200px;
-    position:fixed;
-    right: 20px;
+
+    height:270px;
+    width: 300px;
+    /* position:fixed; */
+    /* right: 20px; */
     border-radius: 10px;
-    margin-top: 250px; 
+    /* margin-top: 250px;  */
 }
 
 #mapAbove {
     overflow-wrap: break-word;
     font-family: 'Fjalla One', sans-serif;
-    font-weight: bold;
-    padding:10px;
+    /* font-weight: bold; */
+    /* padding:10px; */
     font-size: 15px;
     background: -webkit-linear-gradient(rgb(0, 80, 137), rgb(0, 155, 34));
     text-align: center;
@@ -208,13 +206,26 @@ hr{
     border: 0;
     height: 1px;
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
-  }
+ 
+}
+
+.profileHeader {
+    
+    /* background-image: url(../src/assets/images/profileFeed.png);
+    background-size: 450px 250px;
+    background-repeat: no-repeat; */
+
+
+}
   
   
 .loginFeedImg {
     opacity: 0.8;
     border-radius: 30px;
-    width: 70%;
+    width: 80%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 
@@ -226,12 +237,14 @@ hr{
     background: -webkit-linear-gradient(rgb(0, 98, 168), rgb(0, 156, 34));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    padding:10px 10px;
   }
   
   .home-font6 {
     font-family: 'Fjalla One', sans-serif;
-    font-size: 18px;
+    font-size: 20px;
     font-weight: bold;  
+    padding:10px 10px;
   }
 
   .rule-font1{
@@ -270,8 +283,6 @@ hr{
 
 
 
-
-
   @keyframes bounceIn {
 	0%, 20%, 50%, 80%, 100% {
     transform: translateY(0);
@@ -286,15 +297,9 @@ hr{
 }
 
 .bounce {
-  animation: bounceIn 2.5s infinite 8s;
+  animation: bounceIn 2.5s infinite 2s;
+  position:fixed;
+  bottom:10px;
+  left:1%;
 }
 
-.chatGPTBox{
-    background-color: #eaeaea34;
-    width:250px;
-    height:200px;
-    position:fixed;
-    right: 20px;
-    border-radius: 10px;
-    margin-top: 250px; 
-}

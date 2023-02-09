@@ -1,24 +1,19 @@
 import React, {useState} from 'react'
-import SimpleDialog from '@mui/material/Dialog';
-import { Button } from '@mui/material'
-
 import logo from '../assets/images/logo-black.png';
 import agora from '../assets/images/agora.JPG';
 import promisePic from '../assets/images/promise.png';
 import { Grid } from '@mui/material';
 import Geolocation from '../components/Geolocation';
-import ChatGPT from '../components/ChatGPT';
+
 
 
 
 function About() {
 
-  const [formOpen, setFormOpen] = useState(false);
-
 
   return (
     <div>
-      <Geolocation />
+
 
 
       <div className="aboutTop">
@@ -59,21 +54,6 @@ function About() {
           </Grid>
         </Grid>
 
-
-
-
-    {/* <div className="chatGPTBox">
-      <h6>Want to chat with ChatGPT?</h6>
-        <div class="bounce">
-          <img className="chatImag" src="https://cdn-icons-png.flaticon.com/512/3649/3649460.png" alt="CJ" width="100" height="100" onClick={()=>setFormOpen(true)}/>
-        </div>
-    </div> */}
-
-
-
-    <SimpleDialog fullWidth maxWidth='sm' open={formOpen} onClose={() => setFormOpen(false)}>
-      <ChatGPT/>
-    </SimpleDialog>
 
       </div>
 
