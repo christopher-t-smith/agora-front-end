@@ -41,23 +41,27 @@ const GiphySearch = ({ handleSelect }) => {
       >
         Search
       </Button>
-      {results && results.map((result) => (
-        <img
-          key={result.id}
-          src={result.images.fixed_height.url}
-          alt={result.title}
-          onClick={() => {
-            setSelectedGif(result.images.fixed_height.url);
-            handleSelect(result.images.fixed_height.url);
-          }}
-          style={{
-            border:
-              selectedGif === result.images.fixed_height.url
-                ? "3px solid blue"
-                : "",
-          }}
-        />
-      ))}
+      {results && results.length > 0 ? (
+        results.map((result) => (
+          <img
+            key={result.id}
+            src={result.images.fixed_height.url}
+            alt={result.title}
+            onClick={() => {
+              setSelectedGif(result.images.fixed_height.url);
+              handleSelect(result.images.fixed_height.url);
+            }}
+            style={{
+              border:
+                selectedGif === result.images.fixed_height.url
+                  ? "3px solid blue"
+                  : "",
+            }}
+          />
+        ))
+      ) : (
+        <Typography variant="body1">No results to display</Typography>
+      )}
     </div>
   );
 };
