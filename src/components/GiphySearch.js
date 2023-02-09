@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
-import { Button, TextField } from "@mui/material";
+import { Button, TextField, Typography } from "@mui/material";
 
 const GiphySearch = ({ open, handleClose, handleSelect }) => {
   const [query, setQuery] = useState("");
@@ -9,7 +9,7 @@ const GiphySearch = ({ open, handleClose, handleSelect }) => {
 
   const handleSearch = async () => {
     try {
-      const res = await axios.post("http://localhost:8000/api/giphy", {
+      const res = await axios.post("https://agora-agora1.herokuapp.com/api/giphy", {
         query,
       });
       setResults(res.data.data);
@@ -20,6 +20,7 @@ const GiphySearch = ({ open, handleClose, handleSelect }) => {
 
   return (
     <div>
+      <Typography variant="h5">Giphy Search:</Typography>
       <TextField
         margin="normal"
         required

@@ -2,9 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import ActionAreaCard from "./Card";
 import Grid from "@mui/material/Grid";
-import { CardContent, Typography } from "@mui/material";
-import { TextField } from "@mui/material";
-import { Button } from "@mui/material";
+import { CardContent, Typography, TextField, Button } from "@mui/material";
 import GiphySearch from "./GiphySearch";
 import Dialog from "@mui/material/Dialog";
 
@@ -14,11 +12,11 @@ const ProfilePageFeed = () => {
   const email = localStorage.getItem("email");
   // const [showForm, setShowForm] = useState(false);
 
-  const username = localStorage.getItem("username");
+  localStorage.getItem("username");
 
   const [title, setTitle] = useState("");
   const [body, setBody] = useState("");
-  const [gifSearch, setGifSearch] = useState("");
+  const gifSearch = useState("");
   const [tags, setTags] = useState("");
   const [selectedGif, setSelectedGif] = useState("");
   const [open, setOpen] = useState(false);
@@ -30,7 +28,7 @@ const ProfilePageFeed = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:8000/api/posts")
+      .get("https://agora-agora1.herokuapp.com/api/posts")
       .then((res) => {
         const filteredPosts = res.data.posts.filter(
           (post) => post.email === email
@@ -45,13 +43,13 @@ const ProfilePageFeed = () => {
     console.log(id);
 
     axios
-      .put(`http://localhost:8000/api/posts/${id}`, {
+      .put(`https://agora-agora1.herokuapp.com/api/posts/${id}`, {
         title: title,
         body: body,
         media: {
           gifSearch: selectedGif,
         },
-        tags: tags,
+        tags: tags.split(",").map((tag) => tag.trim()),
       })
       .then((res) => {
         setPosts({ title, body, gifSearch, tags });
@@ -61,7 +59,7 @@ const ProfilePageFeed = () => {
   };
 
   const handleDelete = (id) => {
-    axios.delete(`http://localhost:8000/api/posts/${id}`).then((res) => {
+    axios.delete(`https://agora-agora1.herokuapp.com/api/posts/${id}`).then((res) => {
       console.log("Feed deleted successfully");
       window.location.reload(true);
     });
@@ -100,12 +98,13 @@ const ProfilePageFeed = () => {
               onClose={() => setFormOpen(false)}
             >
               <form onSubmit={() => handleEdit(post._id)}>
+                <Typography variant="h4">Edit Post:</Typography>
                 <TextField
                   margin="normal"
                   required
                   fullWidth
                   id="title"
-                  label="Feed Title"
+                  label="Title"
                   name="title"
                   value={title}
                   onChange={(e) => setTitle(e.target.value)}
@@ -118,7 +117,7 @@ const ProfilePageFeed = () => {
                   required
                   fullWidth
                   id="body"
-                  label="Feed Body"
+                  label="Body"
                   name="body"
                   value={body}
                   onChange={(e) => setBody(e.target.value)}
@@ -149,7 +148,7 @@ const ProfilePageFeed = () => {
                   margin="normal"
                   fullWidth
                   id="tags"
-                  label="Tags (comma-separated)"
+                  label="Tags (comma-separated)*"
                   name="tags"
                   value={tags}
                   onChange={(e) => setTags(e.target.value)}
