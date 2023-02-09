@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
-import { Button, TextField } from "@mui/material";
+import { Button, TextField, Typography } from "@mui/material";
 
 const GiphySearch = ({ open, handleClose, handleSelect }) => {
   const [query, setQuery] = useState("");
@@ -20,6 +20,7 @@ const GiphySearch = ({ open, handleClose, handleSelect }) => {
 
   return (
     <div>
+      <Typography variant="h5">Giphy Search:</Typography>
       <TextField
         margin="normal"
         required
